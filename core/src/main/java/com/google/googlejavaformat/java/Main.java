@@ -17,9 +17,6 @@ package com.google.googlejavaformat.java;
 import static java.lang.Math.min;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
-import com.google.common.io.ByteStreams;
-import com.google.googlejavaformat.FormatterDiagnostic;
-import com.google.googlejavaformat.java.JavaFormatterOptions.Style;
 import java.io.IOError;
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,6 +32,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+
+import com.google.common.io.ByteStreams;
+import com.google.googlejavaformat.FormatterDiagnostic;
 
 /** The main class for the Java formatter CLI. */
 public final class Main {
@@ -105,7 +105,7 @@ public final class Main {
 
     JavaFormatterOptions options =
         JavaFormatterOptions.builder()
-            .style(parameters.aosp() ? Style.AOSP : Style.GOOGLE)
+            // .style(parameters.aosp() ? Style.AOSP : Style.GOOGLE)
             .formatJavadoc(parameters.formatJavadoc())
             .build();
 

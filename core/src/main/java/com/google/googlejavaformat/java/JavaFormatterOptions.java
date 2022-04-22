@@ -81,7 +81,7 @@ public class JavaFormatterOptions {
 
   /** A builder for {@link JavaFormatterOptions}. */
   public static class Builder {
-    private Style style = Style.GOOGLE;
+    private Style style = Style.AOSP;
     private boolean formatJavadoc = true;
 
     private Builder() {}
